@@ -3,6 +3,6 @@
 
   angular
     .module('red')
-    .constant('APP_NAME', 'RED Angular seed application');
+    .constant('APP_NAME', 'Mars Colonist App');
 
 })();
