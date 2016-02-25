@@ -1,3 +1,16 @@
 <div class="reports">
-  <h2>{{description}}</h2>
+  <h1> Report Encounter</h1>
+  <p>Saftly on Mars is your responsibility</p>
+
+  <form>
+    <input type="hidden" ng-model="encounters.date"/>
+    <select class="" name="alien-types" ng-model="encounters.atype">
+      <option value="{{alien.type}}"
+          ng-repeat="alien in aliens">{{alien.type}}</option>
+    </select>
+    <textarea name="" id="" cols="30" rows="10"
+          ng-model="encounters.action"></textarea>
+    <button type="button" ng-click="sendReport($event)">Send Report</button>
+  </form>
+  {{encounters.action}}
 </div>

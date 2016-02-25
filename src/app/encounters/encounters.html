@@ -1,3 +1,18 @@
 <div class="encounters">
-  <h2>{{description}}</h2>
+  <header class="header">
+<h1>Recent Encounters</h1>
+<p>Seen an Alien? Report it!</p>
+</header>
+<div class="report-summary">
+  <ul>
+    <li ng-repeat="reports in encounters">
+      <div>{{reports.date}}</div>
+      <div>{{reports.atype}}</div>
+      <div>{{reports.action}}</div>
+    </li>
+  </ul>
+</div>
+<footer class="footer">
+  <a href="">Report Encounter</a>
+</footer>
 </div>

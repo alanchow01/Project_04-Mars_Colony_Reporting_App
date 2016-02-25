@@ -1,0 +1,35 @@
+.encounters {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.report-summary {
+  overflow: auto;
+  height: 70vh;
+  margin-top: 10vh;
+}
+
+.header {
+  background: #eee;
+  height: 10vh;
+  width: 100vw;
+  text-align: center;
+  position: fixed;
+}
+
+.footer {
+  background: #000;
+  height: 20vh;
+  width: 100vw;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+    align-items: center;
+    justify-content: center;
+  a {
+    font-size: 2rem;
+    color: #fff;
+    text-decoration: none;
+  }
+}

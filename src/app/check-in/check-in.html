@@ -1,2 +1,23 @@
 <div class="check-in">
+  <h1>Register</h1>
+
+  <form name="registrationform" class="register-form">
+    {{ colonist.name }}
+    <input name="name" type="text" placeholder="Name"
+            ng-minlength="3"
+            ng-required="true"
+            ng-change="checkValid()"
+            ng-model="colonist.name"
+            ng-class="{invalid:validate}"/>
+    <input  ng-required="true" type="number" placeholder="Age"
+            ng-model="colonist.age"
+            ng-change="checkValid()"
+            ng-class="{invalid:validate}" />
+    <select  ng-required="true" name="jobs" id="jobs" ng-model="colonist.job_id" ng-class="{invalid:validate}" />
+      <option value="">--- Select A Job ---</option>
+      <option value="{{job.id}}" ng-repeat="job in jobs">{{job.name}}</option>
+    </select>
+    <button ng-click="login($event)">Check in</button>
+
+  </form>
 </div>
