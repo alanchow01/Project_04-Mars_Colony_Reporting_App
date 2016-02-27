@@ -1,35 +1,57 @@
 .encounters {
-  width: 100vw;
-  height: 100vh;
   overflow: hidden;
 }
 
 .report-summary {
   overflow: auto;
-  height: 70vh;
-  margin-top: 10vh;
+  height: 61vh;
+  margin-top: 14vh;
 }
 
 .header {
-  background: #eee;
-  height: 10vh;
+  height: 14vh;
   width: 100vw;
   text-align: center;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.encounter-header {
   position: fixed;
+  background: #fff;
+}
+
+.instructions {
+  margin: 0;
+  font-size: 1rem;
 }
 
 .footer {
   background: #000;
-  height: 20vh;
+  height: 25vh;
   width: 100vw;
   display: flex;
   position: fixed;
   bottom: 0;
     align-items: center;
     justify-content: center;
-  a {
-    font-size: 2rem;
-    color: #fff;
-    text-decoration: none;
+}
+
+.add-report{
+  color: #fff;
+  font-size: 2rem;
+  &:hover {
+    cursor: pointer;
   }
+}
+ul {
+  margin: 0;
+  padding: 0 1rem;
+}
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 1rem;
 }

@@ -1,18 +1,17 @@
 <div class="encounters">
-  <header class="header">
+  <header class="header encounter-header">
 <h1>Recent Encounters</h1>
-<p>Seen an Alien? Report it!</p>
+<p class="instructions">See an Alien? Report it!</p>
 </header>
 <div class="report-summary">
   <ul>
     <li ng-repeat="reports in encounters">
-      <div>{{reports.date}}</div>
-      <div>{{reports.atype}}</div>
+      <div>{{reports.date}} - {{reports.atype}}</div>
       <div>{{reports.action}}</div>
     </li>
   </ul>
 </div>
 <footer class="footer">
-  <a href="">Report Encounter</a>
+  <div class="add-report" ng-click="reportEncounter($event)">Report Encounter</div>
 </footer>
 </div>

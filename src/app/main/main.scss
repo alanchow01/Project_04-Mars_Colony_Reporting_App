@@ -4,8 +4,6 @@
   url('./images/mars.jpg') bottom left;
   background-size: cover, cover;
   color: #fff;
-  width: 100vw;
-  height: 100vh;
   display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -16,7 +14,13 @@
 }
 
 .touch-to-start {
-  background: #fff;
-  width: 5rem;
-  height: 5rem;
+  background: rgba(255, 255, 255, 0);
+  opacity: 1;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, .0),
+               0 0 0 40px rgba(255, 255, 255, .0),
+               0 0 0 60px rgba(255, 255, 255, .0);
+  animation: pulse 2s linear alternate infinite;
 }

@@ -6,7 +6,7 @@
     .controller('EncountersCtrl', EncountersCtrl);
 
   /** @ngInject */
-  function EncountersCtrl($scope, $http) {
+  function EncountersCtrl($scope, $http, $state) {
     var REPORTS_GET_URL = 'https://red-wdp-api.herokuapp.com/api/mars/encounters';
 
     $http({
@@ -17,6 +17,11 @@
     }, function(error){
       //TODO: handle error
     });
+
+    $scope.reportEncounter = function(event){
+      event.preventDefault();
+      $state.go('report');
+    };
   }
 
 })();

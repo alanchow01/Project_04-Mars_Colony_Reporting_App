@@ -1,0 +1,19 @@
+.reports {
+  background: #000;
+  color: #fff;
+}
+
+.report-header {
+  background: #000;
+  position: relative;
+}
+
+.report-form {
+  & select {
+    margin-bottom: 1rem;
+  }
+  & textarea {
+    background: #fff;
+    color: #f00;
+  }
+}

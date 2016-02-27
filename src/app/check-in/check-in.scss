@@ -1,28 +1,14 @@
 .check-in {
   color: #fff;
-   background:#000;
-   line-height: 3;
-   font-size: 1.5rem;
-   text-align: center;
-   height: 100vh;
- }
+  background:#000;
+  line-height: 3;
+  font-size: 1.5rem;
+  text-align: center;
+}
 
 .register-form {
   margin: 0 auto;
   width: 80vw;
-}
-
-input, select {
-  width: 100%;
-  font-size: 1.25rem;
-  color: #f00;
-  background: #000;
-  border: 0;
-  border-bottom: 1px solid #fff;
-  padding: .25rem 0 .25rem .5rem;
-  &::placeholder {
-    color: red;
-  }
 }
 
 button {
@@ -33,27 +19,5 @@ button {
   margin-top: 15rem;
   &:hover {
     cursor: pointer;
-  }
-}
-
-.validate {
-  border: 1px solid red;
-}
-
-.invalid {
-  animation: invalid 1s infinite;
-}
-@keyframes invalid {
-  0% {
-    outline: 3px solid transparent;
-    border-radius: 15px;
-  }
-  50% {
-    outline: 3px solid red;
-    border-radius: 15px;
-  }
-  100% {
-    outline: 3px solid transparent;
-    border-radius: 10px;
   }
 }

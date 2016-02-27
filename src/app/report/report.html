@@ -1,16 +1,24 @@
 <div class="reports">
+  <header class="header report-header">
   <h1> Report Encounter</h1>
-  <p>Saftly on Mars is your responsibility</p>
+  <p class="instructions">Saftly on Mars is your responsibility</p>
+</header>
 
-  <form>
-    <input type="hidden" ng-model="encounters.date"/>
-    <select class="" name="alien-types" ng-model="encounters.atype">
+<div class="report-form">
+  <form novalidate name ="validateForm" class="forms"
+            ng-class="{ 'invalid': validate }">
+    <select required name="alien-types"
+            ng-model="report.atype">
+      <option value="">--- Select Alien Type ---</option>
       <option value="{{alien.type}}"
-          ng-repeat="alien in aliens">{{alien.type}}</option>
+            ng-repeat="alien in aliens">{{alien.type}}</option>
     </select>
-    <textarea name="" id="" cols="30" rows="10"
-          ng-model="encounters.action"></textarea>
-    <button type="button" ng-click="sendReport($event)">Send Report</button>
+    <textarea required name="action-taken" id="action-taken" rows="10" placeholder="Action taken"
+            ng-model="report.action"></textarea>
   </form>
-  {{encounters.action}}
+</div>
+<footer class="footer">
+  <div class="add-report"
+        ng-click="sendReport($event)">Send Report</div>
+</footer>
 </div>
