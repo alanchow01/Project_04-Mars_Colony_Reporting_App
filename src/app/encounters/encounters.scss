@@ -3,24 +3,23 @@
 }
 
 .report-summary {
-  overflow: auto;
   height: 61vh;
   margin-top: 14vh;
-}
-
-.header {
-  height: 14vh;
-  width: 100vw;
-  text-align: center;
-  display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  overflow: auto;
 }
 
 .encounter-header {
-  position: fixed;
   background: #fff;
+  height: 14vh;
+  position: fixed;
+}
+
+.header, .footer-black {
+  width: 100vw;
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .instructions {
@@ -28,20 +27,15 @@
   font-size: 1rem;
 }
 
-.footer {
+.footer-black {
   background: #000;
   height: 25vh;
-  width: 100vw;
-  display: flex;
-  position: fixed;
+  position: absolute;
   bottom: 0;
-    align-items: center;
-    justify-content: center;
 }
 
 .add-report{
   color: #fff;
-  font-size: 2rem;
   &:hover {
     cursor: pointer;
   }

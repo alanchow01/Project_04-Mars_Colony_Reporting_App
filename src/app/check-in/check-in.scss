@@ -11,12 +11,7 @@
   width: 80vw;
 }
 
-button {
-  background: #000;
-  color: #fff;
-  font-size: 2rem;
-  border-style: none;
-  margin-top: 15rem;
+.checkin-btn {
   &:hover {
     cursor: pointer;
   }

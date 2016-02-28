@@ -1,6 +1,14 @@
-<div class="welcome">
-    <!-- <img src="https://red-wdf.herokuapp.com/public/img/red-logo.svg" alt=""> -->
+<div class="welcome" ng-swipe-left="appEnter($event)">
+  <header>
     <h1 class="app-title">Mars Colony 1</h1>
-    <div class="touch-to-start" ng-click="appEnter($event)"></div>
-    <h3>Tab circle to enter</h3>
+  </header>
+
+  <section class="touch-area">
+    <div class="circle-pulse"
+          ng-click="appEnter($event)"></div>
+  </section>
+
+  <footer>
+    <h2>Tab the circle to enter</h2>
+  </footer>
 </div>

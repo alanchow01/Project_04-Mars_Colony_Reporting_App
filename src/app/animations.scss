@@ -5,7 +5,7 @@
    box-shadow: 0 0 0 0 rgba(255, 255, 255, .15),
                 0 0 0 40px rgba(255, 255, 255, .15),
                 0 0 0 60px rgba(255, 255, 255, .15); }
-  20% {
+  25% {
    box-shadow: 0 0 0 0 rgba(255, 255, 255, .15),
                 0 0 0 50px rgba(255, 255, 255, .15),
                 0 0 0 70px rgba(255, 255, 255, .15); }
@@ -27,16 +27,13 @@
 // --- Form Validation Flash --- //
 @keyframes invalid {
   0% {
-    outline: 3px solid transparent;
-    border-radius: 15px;
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 1);
   }
   50% {
-    outline: 3px solid red;
-    border-radius: 15px;
+    box-shadow: 0 0 0 5px rgba(255, 0, 0, .5);
   }
   100% {
-    outline: 3px solid transparent;
-    border-radius: 10px;
+    box-shadow: 0 0 0 0px rgba(255, 0, 0, 0);
   }
 }
 
@@ -51,7 +48,7 @@
 }
 
 [ui-view].ng-enter {
-  .welcome & {
+  .welcome &, .check-in &, .encounters &, .report & {
     opacity: 0;
   }
   .check-in & {
@@ -59,11 +56,9 @@
   }
   .encounters & {
     transform: translate3d(900px, 0, 0);
-    opacity: 0;
   }
   .report & {
-    transform: translate3d(900px, 0, 0);
-    opacity: 0;
+    transform: translate3d(-480px, 0, 0);
   }
 }
 
@@ -71,50 +66,35 @@
   .welcome & {
     opacity: 0;
   }
-  .check-in & {
-    transform: translate3d(0, 0, 0);
-  }
-  .encounters & {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
-  .report & {
+  .check-in &, .encounters &, .report & {
     transform: translate3d(0, 0, 0);
     opacity: 1;
   }
 }
 
 [ui-view].ng-leave {
-  .welcome & {
+  .welcome &, .check-in &, .encounters &, .report &  {
     opacity: 1;
   }
   .check-in & {
     transform: scale3d(1, 1, 1);
-    opacity: 1;
   }
-  .encounters & {
+  .encounters &, .report & {
     transform: translate3d(0, 0, 0);
-    opacity: 1;
   }
-  // .reports & {
-  //   transform: translate3d(900px, 0, 0);
-  // }
 }
 
 [ui-view].ng-leave-active {
-  .welcome & {
+  .welcome &, .check-in &, .encounters &, .report & {
     opacity: 0;
   }
   .check-in & {
     transform: scale3d(0, 0, 0);
-    opacity: 0;
   }
   .encounters & {
     transform: translate3d(900px, 0, 0);
-    opacity: 0;
   }
-  // .reports & {
-  //   transform: translate3d(0, 0, 0);
-  //   opacity: 0;
-  // }
+  .report & {
+    transform: translate3d(480px, 0, 0);
+  }
 }

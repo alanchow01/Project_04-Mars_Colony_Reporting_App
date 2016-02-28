@@ -28,9 +28,15 @@ html, body, input, select, textarea {
   font-size: 18px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2 {
   margin: 0;
   font-weight: 100;
+}
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.75rem;
 }
 
 .forms {
@@ -48,10 +54,13 @@ input, select, textarea {
   &::placeholder {
     color: #f00;
   }
-  select, option {
-    color: #f00;
+  option {
     background: #fff;
   }
+}
+
+select {
+  color: #f00;
 }
 
 [ui-view]>div {
@@ -66,34 +75,14 @@ input, select, textarea {
   padding: 0.2em 0;
 }
 
-.red {
-  color:$red-color;
-}
-
-.welcome {
-	height: 100vh;
-
-	display:flex;
-	align-items:center;
-	justify-content: center;
-	flex-direction:column;
-
-	img { width: 42%; }
-  h1  { text-align:center; }
-
-}
-
 .invalid {
   transition: .5s linear all;
-}
-
-.invalid {
-  input, select, textarea {
-    &.ng-invalid {
-      border-radius: 0;
-      animation: invalid .5s infinite;
+    input, select, textarea {
+      &.ng-invalid {
+        border-radius: 0;
+        animation: invalid .5s infinite;
+      }
     }
-  }
 }
 
 /**

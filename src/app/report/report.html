@@ -1,24 +1,26 @@
-<div class="reports">
+<div class="reports" ng-swipe-left="sendReport($event)">
   <header class="header report-header">
-  <h1> Report Encounter</h1>
-  <p class="instructions">Saftly on Mars is your responsibility</p>
-</header>
+    <h1> Report Encounter</h1>
+    <p class="instructions">Safety on Mars is your responsibility</p>
+  </header>
 
-<div class="report-form">
-  <form novalidate name ="validateForm" class="forms"
-            ng-class="{ 'invalid': validate }">
-    <select required name="alien-types"
-            ng-model="report.atype">
-      <option value="">--- Select Alien Type ---</option>
+  <section class="report-form">
+      <form novalidate name ="validateForm" class="forms"
+      ng-class="{ 'invalid': validate }">
+      <select required name="alien-types"
+      ng-model="report.atype">
+      <option value="">Select Alien Type</option>
       <option value="{{alien.type}}"
-            ng-repeat="alien in aliens">{{alien.type}}</option>
+      ng-repeat="alien in aliens">{{alien.type}}</option>
     </select>
     <textarea required name="action-taken" id="action-taken" rows="10" placeholder="Action taken"
-            ng-model="report.action"></textarea>
-  </form>
-</div>
-<footer class="footer">
-  <div class="add-report"
-        ng-click="sendReport($event)">Send Report</div>
+    ng-model="report.action">
+  </textarea>
+</form>
+</section>
+
+<footer class="footer-black">
+  <h2 class="add-report"
+  ng-click="sendReport($event)">Submit Report</h2>
 </footer>
 </div>

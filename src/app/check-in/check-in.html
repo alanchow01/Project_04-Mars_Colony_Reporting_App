@@ -1,19 +1,25 @@
-<div class="check-in">
-  <h1>Register</h1>
+<div class="check-in" ng-swipe-left="login($event)">
+  <header class="report-header">
+    <h1>Register</h1>
+  </header>
 
-  <form novalidate name="validateForm" class="forms"
-        ng-class="{ 'invalid': validate }">
+  <section>
+    <form novalidate name="validateForm" class="forms"
+    ng-class="{ 'invalid': validate }">
     <input required name="name" type="text" placeholder="Name"
-            minlength="3"
-            ng-model="colonist.name"/>
+    minlength="3"
+    ng-model="colonist.name"/>
     <input required type="number" placeholder="Age"
-            ng-model="colonist.age"/>
+    ng-model="colonist.age"/>
     <select required name="jobs" id="jobs"
-            ng-model="colonist.job_id" />
-      <option value="">--- Select A Job ---</option>
-      <option value="{{job.id}}" ng-repeat="job in jobs">{{job.name}}</option>
-    </select>
-    <button type="button" ng-click="login($event)">Check in</button>
+    ng-model="colonist.job_id" />
+    <option value="">Select A Job</option>
+    <option value="{{job.id}}" ng-repeat="job in jobs">{{job.name}}</option>
+  </select>
+</form>
+</section>
 
-  </form>
+<footer class="footer-black">
+  <h2 class="checkin-btn" ng-click="login($event)">Check in</h2>
+</footer>
 </div>
