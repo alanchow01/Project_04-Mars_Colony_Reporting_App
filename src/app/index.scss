@@ -4,12 +4,12 @@
  */
 // bower:scss
 // endbower
-// @import "./reset";
+@import "./reset";
 @import "./main/main";
 @import "./check-in/check-in";
 @import "./encounters/encounters";
 @import "./animations";
-// @import url(http://fonts.googleapis.com/css?family=Roboto:100,400,700italic,400italic);
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,400);
 
 $red-color: #ed4343;
 $red-font: 'Roboto', sans-serif;
