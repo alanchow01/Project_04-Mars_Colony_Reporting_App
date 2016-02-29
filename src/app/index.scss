@@ -8,8 +8,8 @@
 @import "./main/main";
 @import "./check-in/check-in";
 @import "./encounters/encounters";
-@import "./animations.scss";
-@import url(http://fonts.googleapis.com/css?family=Roboto:100,300,700italic,400italic);
+@import "./animations";
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,400,700italic,400italic);
 
 $red-color: #ed4343;
 $red-font: 'Roboto', sans-serif;
@@ -28,39 +28,79 @@ html, body, input, select, textarea {
   font-size: 18px;
 }
 
-h1, h2 {
+h1, h2, h3 {
   margin: 0;
   font-weight: 100;
 }
+
 h1 {
   font-size: 2rem;
 }
+
 h2 {
   font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+input, select, textarea {
+  font-size: 1.25rem;
+  color: #f00;
+  background: #000;
+  border: 0;
+  border-bottom: 1px solid #fff;
+  padding: .25rem 0 .25rem .5rem;
+  margin-bottom: .25rem;
+  &::placeholder {
+    color: #f00;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+option {
+  background: #fff;
+}
+
+select {
+  color: #f00;
+}
+
+.header, .footer-black {
+  width: 100vw;
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header {
+  min-height: 25vh;
+  padding: 0rem 0 2rem;
+  h1 {
+    padding-top: 2rem;
+  }
+}
+
+.footer-black {
+  background: #000;
+  color: #fff;
+  height: 25vh;
+  position: absolute;
+  bottom: 0;
+}
+
+.instructions {
+  margin: 0;
+  font-size: 1rem;
 }
 
 .forms {
   margin: 0 auto;
   width: 80vw;
-}
-
-input, select, textarea {
-  font-size: 1.25rem;
-  color: #fff;
-  background: #000;
-  border: 0;
-  border-bottom: 1px solid #fff;
-  padding: .25rem 0 .25rem .5rem;
-  &::placeholder {
-    color: #f00;
-  }
-  option {
-    background: #fff;
-  }
-}
-
-select {
-  color: #f00;
 }
 
 [ui-view]>div {

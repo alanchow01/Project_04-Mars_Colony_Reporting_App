@@ -1,20 +1,25 @@
 <div class="encounters" ng-swipe-left="reportEncounter($event)">
   <header class="header encounter-header">
-    <h1>Recent Encounters</h1>
-    <p class="instructions">See an Alien? Report it!</p>
-  </header>
+    <div class="colonist-info" ng-model="userInfo">
+      <img src="./app/images/planet.jpg" class="mars-img" alt="Welcome Colonist">
+      <p>Welcome: <span class="user-info">{{ userInfo.name }}</span><br>
+        Current Job: <span class="user-info">{{ userInfo.job }}</span></p>
+      </div>
+      <h1>Recent Encounters</h1>
+      <p class="instructions">See an Alien? Report it!</p>
+    </header>
 
-  <section class="report-summary">
+    <section class="report-summary">
       <ul>
         <li ng-repeat="reports in encounters">
           <div>{{reports.date}} - {{reports.atype}}</div>
           <div>{{reports.action}}</div>
         </li>
       </ul>
-  </section>
+    </section>
 
-  <footer class="footer-black">
-    <h2 class="add-report"
-        ng-click="reportEncounter($event)">Report Encounter</h2>
-  </footer>
-</div>
+    <footer class="footer-black">
+      <h2 class="add-report"
+      ng-click="reportEncounter($event)">Report Encounter</h2>
+    </footer>
+  </div>

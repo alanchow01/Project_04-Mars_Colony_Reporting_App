@@ -1,19 +1,14 @@
-## AngularJS - Seed application
+# Project 4 - AngularJS Mars Colony Safety App
 
-This repository contains the basic application scaffold for **Project 4**. <br>
-It is based on the [generator-angular](https://github.com/yeoman/generator-angular)  application boilerplate.
+## Project Summery
+A one page reporting app for Martian Colonists to report alien encounters and actions taken when dealing with the aliens. This App records user information when logged in, displays encounter reports from other colonists, and can file a new report whenever an alien is encountered.
 
-To install this project on your computer:
+## Tools Used
+- AngularJS
+	- Directives: ng-repeat, ng-click, ng-class, ng-animate, ng-swipe
+	- Modules: Service, Factory, Controller, Directive
+	- ui-router plug-ins
+	- Ajax GET and POST requests
+- SCSS and CSS animations
 
-Step 1 : Create a directory for on your computer and clone this repository:
-
-	git clone https://github.com/redacademy/angular-project.git .
-    
-Step 2 : From the project's root directory, install the project dependencies:
-	
-    npm install && bower install
-    
-Step 3 : The project should now be installed. Start the local development server by typing:
-
-	gulp serve
-
+## Experiences

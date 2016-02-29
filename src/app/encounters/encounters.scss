@@ -2,48 +2,48 @@
   overflow: hidden;
 }
 
-.report-summary {
-  height: 61vh;
-  margin-top: 14vh;
-  overflow: auto;
-}
-
 .encounter-header {
-  background: #fff;
-  height: 14vh;
   position: fixed;
 }
 
-.header, .footer-black {
+.user-info{
+  font-weight: 400;
+}
+
+.colonist-info {
+  border-bottom: 1px solid #bdbdbd;
+  height: auto;
+  padding: 0 1.5rem 1rem;
   width: 100vw;
   display: flex;
+    flex: row nowrap;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
 }
 
-.instructions {
-  margin: 0;
-  font-size: 1rem;
+.mars-img {
+  border-radius: 50%;
+  height: 50px;
+  margin-right: 1rem;
+  width: 50px;
 }
 
-.footer-black {
-  background: #000;
-  height: 25vh;
-  position: absolute;
-  bottom: 0;
+.report-summary {
+  height: 50vh;
+  margin-top: 25vh;
+  overflow: auto;
 }
 
 .add-report{
-  color: #fff;
   &:hover {
     cursor: pointer;
   }
 }
+
 ul {
   margin: 0;
   padding: 0 1rem;
 }
+
 li {
   list-style: none;
   margin: 0;

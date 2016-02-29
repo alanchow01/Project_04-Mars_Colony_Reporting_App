@@ -6,7 +6,7 @@
   .controller('CheckinCtrl', CheckinCtrl);
 
   /** @ngInject */
-  function CheckinCtrl($scope, $http, $state, $cookies) { //$http makes any kind of HTTP request (i.e. JSON)
+  function CheckinCtrl($scope, $http, $state, $cookies) {
     var JOBS_GET_URL = 'https://red-wdp-api.herokuapp.com/api/mars/jobs';
     var COLONIST_POST_URL = 'https://red-wdp-api.herokuapp.com/api/mars/colonists';
     $scope.validate = false;
@@ -20,7 +20,7 @@
       method: 'GET',
       url: JOBS_GET_URL
     }).then(function(response){
-      $scope.jobs = response.data.jobs; //assigns JSON object to 'jobs' in ng-repeat
+      $scope.jobs = response.data.jobs;
     }, function(error){
       //TODO: handle error
     });
@@ -28,7 +28,7 @@
     $scope.login = function(event){
       event.preventDefault();
       if ($scope.validateForm.$invalid) {
-          $scope.validate = true;
+        $scope.validate = true;
       } else {
         $http({
           method: 'POST',
@@ -40,13 +40,8 @@
           $cookies.putObject('session_colonist', response.data.colonist);
           console.log(response);
           $state.go('encounters');
-        }, function(error){
-          console.log(error);
         });
       }
-
     };
   }
-
-
 })();

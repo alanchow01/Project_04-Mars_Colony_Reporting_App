@@ -1,10 +1,15 @@
 <div class="reports" ng-swipe-left="sendReport($event)">
   <header class="header report-header">
-    <h1> Report Encounter</h1>
-    <p class="instructions">Safety on Mars is your responsibility</p>
-  </header>
+    <div class="colonist-info" ng-model="userInfo">
+      <img src="./app/images/planet.jpg" class="mars-img" alt="Welcome Colonist">
+      <p>Welcome: <span class="user-info">{{ userInfo.name }}</span><br>
+        Current Job: <span class="user-info">{{ userInfo.job }}</span></p>
+      </div>
+      <h1> Report Encounter</h1>
+      <p class="instructions">Safety on Mars is your responsibility</p>
+    </header>
 
-  <section class="report-form">
+    <section class="report-form">
       <form novalidate name ="validateForm" class="forms"
       ng-class="{ 'invalid': validate }">
       <select required name="alien-types"
