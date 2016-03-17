@@ -6,9 +6,7 @@
   .controller('CheckinCtrl', CheckinCtrl);
 
   /** @ngInject */
-  function CheckinCtrl($scope, $http, $state, $cookies) {
-    var JOBS_GET_URL = 'https://red-wdp-api.herokuapp.com/api/mars/jobs';
-    var COLONIST_POST_URL = 'https://red-wdp-api.herokuapp.com/api/mars/colonists';
+  function CheckinCtrl($scope, $http, $state, $cookies, marsAPIFactory) {
     $scope.validate = false;
     $cookies.putObject('session_colonist', undefined);
 
@@ -16,10 +14,7 @@
     $scope.colonist = {};
 
     // fetch all jobs
-    $http({
-      method: 'GET',
-      url: JOBS_GET_URL
-    }).then(function(response){
+    marsAPIFactory.getJobs().then(function(response){
       $scope.jobs = response.data.jobs;
     }, function(error){
       //TODO: handle error
@@ -30,13 +25,7 @@
       if ($scope.validateForm.$invalid) {
         $scope.validate = true;
       } else {
-        $http({
-          method: 'POST',
-          url: COLONIST_POST_URL,
-          data: {
-            colonist : $scope.colonist
-          }
-        }).then(function(response){
+        marsAPIFactory.newColonist($scope.colonist).then(function(response){
           $cookies.putObject('session_colonist', response.data.colonist);
           console.log(response);
           $state.go('encounters');

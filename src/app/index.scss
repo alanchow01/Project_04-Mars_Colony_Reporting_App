@@ -69,6 +69,17 @@ select {
   color: #f00;
 }
 
+ul {
+  margin: 0;
+  padding: 0 1rem;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 1rem;
+}
+
 .header, .footer-black {
   width: 100vw;
   display: flex;
