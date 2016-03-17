@@ -9,6 +9,6 @@ A one page reporting app for Martian Colonists to report alien encounters and ac
 	- Modules: Service, Factory, Controller, Directive
 	- ui-router plug-ins
 	- Ajax GET and POST requests
-- SCSS and CSS animations
+- CSS animations
 
 ## Experiences
