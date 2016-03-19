@@ -69,12 +69,12 @@ select {
   color: #f00;
 }
 
-ul {
+.report-summary ul {
   margin: 0;
   padding: 0 1rem;
 }
 
-li {
+li.ng-scope {
   list-style: none;
   margin: 0;
   padding: 0 0 1rem;
