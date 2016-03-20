@@ -22,6 +22,10 @@
       event.preventDefault();
       $state.go('report');
     };
+    $scope.preventBackCheckin = function(event) {
+      event.preventDefault();
+      $window.alert('Oops! You\'ve already logged in.');
+    };
   }
 
 })();
