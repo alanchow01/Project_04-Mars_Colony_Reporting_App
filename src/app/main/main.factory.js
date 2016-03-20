@@ -11,7 +11,6 @@
     var JOBS_GET_URL = 'https://red-wdp-api.herokuapp.com/api/mars/jobs';
     var COLONIST_POST_URL = 'https://red-wdp-api.herokuapp.com/api/mars/colonists';
 
-
     return {
        getEncounters: function() {
         return $http({

@@ -1,4 +1,4 @@
-<div class="encounters" ng-swipe-left="reportEncounter($event)">
+<div class="encounters" ng-swipe-left="reportEncounter($event)" ng-swipe-right="preventBackCheckin($event)">
   <header class="header encounter-header">
     <div class="colonist-info" ng-model="userInfo">
       <img src="./app/images/planet.jpg" class="mars-img" alt="Welcome Colonist">

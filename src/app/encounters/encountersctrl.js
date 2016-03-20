@@ -6,10 +6,11 @@
   .controller('EncountersCtrl', EncountersCtrl);
 
   /** @ngInject */
-  function EncountersCtrl($scope, $http, $state, $rootScope, $cookies, marsAPIFactory) {
+  function EncountersCtrl($location, $scope, $http, $state, $rootScope, $cookies, $window, marsAPIFactory) {
+    var colonist = $cookies.getObject('session_colonist');
     $scope.userInfo = {
-      name: $cookies.getObject('session_colonist').name,
-      job: $cookies.getObject('session_colonist').job.name
+      name: colonist.name,
+      job: colonist.job.name
     };
     marsAPIFactory.getEncounters().then(function(response){
       $scope.encounters = response.data.encounters;

@@ -8,9 +8,10 @@
   /** @ngInject */
   function ReportCtrl($scope, $http, $filter, $cookies, $state, marsAPIFactory) {
     $scope.validate = false;
+    var colonist = $cookies.getObject('session_colonist');
     $scope.userInfo = {
-      name: $cookies.getObject('session_colonist').name,
-      job: $cookies.getObject('session_colonist').job.name
+      name: colonist.name,
+      job: colonist.job.name
     };
 
     $scope.report = {
@@ -32,10 +33,8 @@
       } else {
         marsAPIFactory.postReport($scope.report).then(function(response){
           $state.go('encounters');
-          console.log(response);
         }, function(error){
           $state.go('encounters');
-          console.log(error);
         });
       }
 
